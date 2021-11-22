@@ -1,12 +1,23 @@
+// npm i express
+// npm install dotenv
+
 const express = require('express');
+require('dotenv').config();
+
+// Creando el servidor express
 const app = express();
 
-app.get('/', function(req, res) {
-  res.json({
-    ok: true
-  });
-});
+// Directorio Público
+app.use(express.static('public'));
 
-app.listen(4000, function() {
-  console.log(`Servidor corriendo en puerto ${4000}`);
+// rutas
+// app.get('/', function(req, res) {
+//   res.json({
+//     ok: true
+//   });
+// });
+
+// Escuchando peticiones
+app.listen(process.env.PORT, function() {
+  console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
 });
