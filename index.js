@@ -1,5 +1,6 @@
 // npm i express
 // npm install dotenv
+// npm install express-validator
 
 const express = require('express');
 require('dotenv').config();
