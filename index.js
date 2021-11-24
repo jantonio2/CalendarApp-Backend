@@ -3,10 +3,14 @@
 // npm install express-validator
 
 const express = require('express');
+const { dbConnection } = require('./database/config');
 require('dotenv').config();
 
 // Creando el servidor express
 const app = express();
+
+// Base de datos
+dbConnection();
 
 // Directorio Público
 app.use(express.static('public'));
