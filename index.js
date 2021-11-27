@@ -1,6 +1,7 @@
 // npm i express
 // npm install dotenv
 // npm install express-validator
+// npm i bcryptjs
 
 const express = require('express');
 const { dbConnection } = require('./database/config');
