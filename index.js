@@ -3,16 +3,21 @@
 // npm install express-validator
 // npm i bcryptjs
 // npm i jsonwebtoken
+// npm install cors
 
 const express = require('express');
-const { dbConnection } = require('./database/config');
 require('dotenv').config();
+const cors = require('cors');
+const { dbConnection } = require('./database/config');
 
 // Creando el servidor express
 const app = express();
 
 // Base de datos
 dbConnection();
+
+// CORS
+app.use(cors());
 
 // Directorio Público
 app.use(express.static('public'));
