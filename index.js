@@ -4,6 +4,7 @@
 // npm i bcryptjs
 // npm i jsonwebtoken
 // npm install cors
+// heroku logs -n 1000 --tail
 
 const express = require('express');
 require('dotenv').config();
